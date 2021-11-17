@@ -43,10 +43,11 @@ function addClickListeners() {
 };
 
 function handleEvent(e) {
-    //if (e.touches) {
-    //    e.preventDefault();
-    //    e = e.touches[0];
-    //}
+    console.log(e);
+    if (e.touches) {
+        // e.preventDefault();
+        e = e.touches[0];
+    }
 
     var currentColor = colorPicker.current();
     var nextColor = colorPicker.next();
@@ -153,4 +154,11 @@ var resizeCanvas = function () {
     resizeCanvas();
     window.addEventListener("resize", resizeCanvas);
     addClickListeners();
+
+    c.addEventListener('touchend', event => {
+        if (event.cancelable) event.preventDefault();
+    });
+    document.querySelector('header').addEventListener('touchend', event => {
+        if (event.cancelable) event.preventDefault();
+    });
 })();

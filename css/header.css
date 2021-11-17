@@ -4,10 +4,9 @@ header {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-
-    padding: 10% 0;
+    padding: 15% 5%;
 
     background: linear-gradient(-50deg, #324, #111);
 }
@@ -15,13 +14,13 @@ header {
 header .left {
     z-index: 2;
     flex: 2;
-    padding: 0 10%;
+    padding: 0 5%;
 }
 
 header .right {
     z-index: 2;
     flex: 1;
-    padding: 0 10%;
+    padding: 0 5%;
 }
 
 header h1 {
