@@ -3,97 +3,53 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Mstrdav</title>
+    <title>Mstrdav - Github Portfolio</title>
 
     <!-- stylesheets -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/section.css">
+    <link rel="stylesheet" href="css/header.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins|Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <h1>mstrdav.github.io</h1>
-    </header>
+    <aside id="menu">
 
-    <aside>
-        <div class="resume">
-            <h4>Résumé</h4>
-            <p>
-                <a class="a" href="https://github.com/mstrdav/learn_epicycles">
-                    <img src="logo-github.svg" alt="site">
-                </a>
-                <a class="a" href="learn_epicycles/">
-                    <img src="logo-site.svg" alt="site">
-                </a>
-                <a href="#epicycles">Learn Epicycles</a>
-            </p>
-            <p>
-                <a class="a" href="https://github.com/mstrdav/4couleurs">
-                    <img src="logo-github.svg" alt="site">
-                </a>
-                <a class="a" href="4couleurs/">
-                    <img src="logo-site.svg" alt="site">
-                </a>
-                <a href="#couleurs">4 Couleurs</a>
-            </p>
-            <p>
-                <a class="a" href="https://github.com/mstrdav/lejeudelavie">
-                    <img src="logo-github.svg" alt="site">
-                </a>
-                <a class="a" href="lejeudelavie/">
-                    <img src="logo-site.svg" alt="site">
-                </a>
-                <a href="#couleurs">Le jeu de la vie</a>
-            </p>
-            <a href="#soutien">Me soutenir</a>
-        </div>
     </aside>
-    <section>
-        <p>Voici une simple page ou je mets mes quelques projets aboutis. Je suis sympa, je vous épargne les dizaines de projets test, ou ceux commencés et jamais terminés.</p>
-        <h3 id="epicycles">Learn Epicycles</h3>
-        <p>Un site simple et clair qui présente le domaine des epicycles, et comment n'importe quelle courbe périodique peut être décomposée en épicycles grace à la transformée de Fourier.</p>
-        <p>Le site est codé en javascript, mais il s'agit d'une adaption d'un projet Processing, j'ai donc utilisé la librairie P5.js.</p>
 
-        <p class="a-container">
-            <a href="learn_epicycles/">
-                <img src="logo-site.svg" />
-                Le site
-            </a>
-            <a href="https://github.com/mstrdav/learn_epicycles">
-                <img src="logo-github.svg" />
-                Le github
-            </a>
-        </p>
-        <h3 id="couleurs">4 Couleurs</h3>
-        <p>Sur le même principe que Learn Epicycles, il s'agit d'une site en deux parties (explication et interaction) ou l'on peut jouer avec le théorème des 4 couleurs.</p>
-        <p>4 Couleurs est le projet présenté à l'oral d'ISN pour le bac.</p>
 
-        <p class="a-container">
-            <a href="4couleurs/">
-                <img src="logo-site.svg" />
-                Le site
-            </a>
-            <a href="https://github.com/mstrdav/4couleurs">
-                <img src="logo-github.svg" />
-                Le github
-            </a>
-        </p>
-        <h3 id="vie">Le jeu de la vie</h3>
-        <p>Touché par la mort de John Conway, j'ai fait cette reproduction simpliste du jeu de la vie. Il s'agit d'un jeu codé par des règles simples, qui donne lieu à des situations qui peuvent être magnifiquement chaotiques. Choisissez les cellules vivantes à l'instant initial, puis lancez la simulation en appuyant sur espace. Vous pouvez aussi jouer la simulation pas à pas en appuyant sur R.</p>
+    <div id="scroll-snap-container">
+        <canvas id="header-animated-canva"></canvas>
+        <header>
+            <div class="left">
+                <h1>Mstrdav</h1>
+                <p>Toujours les mains dans le cambouis*, avec un focus sur des technologies visuelles et open source.
+                </p>
+                <p class="bottom-note">*cambouis : graisse, huile noircie par le frottement des organes d'une machine.
+                </p>
+            </div>
+            <div class="right">
+                <svg width="130" height="130" viewBox="0 0 130 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M69.0134 102.011C54.4209 112.188 37.7543 119.614 21.2405 118.142C15.1752 117.601 9.56004 115.34 3.79819 113.089C3.29174 112.891 3.04052 112.318 3.23949 111.813C3.43644 111.307 4.0092 111.055 4.51364 111.253C10.1006 113.436 15.5369 115.655 21.4133 116.178C37.6779 117.629 54.0591 110.146 68.3823 100.05C68.3341 99.904 68.2839 99.7581 68.2336 99.6122C67.1283 96.4058 67.8297 91.7303 69.6364 86.8178C72.2571 79.686 77.1427 72.0229 81.5359 67.7902C83.5617 65.8366 85.5232 64.6098 87.1249 64.3519C88.4594 64.1357 89.6049 64.5004 90.4892 65.5345C91.2167 66.3888 91.6327 67.4776 91.7553 68.7539C91.9181 70.4574 91.5523 72.5256 90.7826 74.7761C87.9348 83.1034 79.5684 94.0615 75.0325 97.5779C73.6116 98.6797 72.1666 99.7607 70.6955 100.818C70.9889 101.74 71.2723 102.621 71.62 103.433C72.1304 104.626 72.7756 105.663 73.8648 106.411C75.8745 107.791 78.2842 108.026 80.7481 107.666C84.6932 107.093 88.7729 105.009 91.7814 103.222C108.703 93.1733 117.058 75.7346 121.551 58.2386C126.097 40.5446 126.692 22.7699 128.037 12.2859C128.107 11.7467 128.601 11.3638 129.14 11.4341C129.679 11.5018 130.06 11.9968 129.992 12.5359C128.64 23.0773 128.029 40.9432 123.461 58.7283C118.84 76.7114 110.18 94.5877 92.7863 104.918C89.5848 106.817 85.2297 109.005 81.0315 109.617C78.0631 110.047 75.1711 109.698 72.7514 108.036C71.3406 107.067 70.4684 105.749 69.8092 104.21C69.5138 103.519 69.2606 102.78 69.0134 102.011ZM70.0564 98.8516C69.1239 95.976 69.8856 91.8475 71.4853 87.4976C74.0035 80.6445 78.6821 73.2757 82.9025 69.2071C84.3173 67.8449 85.6619 66.8577 86.8496 66.4487C87.7077 66.1518 88.4574 66.1883 88.9899 66.8134C89.6029 67.5323 89.834 68.5143 89.824 69.6604C89.8139 70.981 89.4783 72.5048 88.9176 74.1405C86.1864 82.1266 78.1757 92.6498 73.8266 96.0203C72.5887 96.9788 71.3306 97.9244 70.0564 98.8516Z"
+                        fill="black" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M2.18625 110.052C2.25257 110.502 2.47768 111.075 2.73693 111.677C3.32176 113.039 4.15376 114.493 4.52355 115.196C4.77476 115.678 4.58988 116.274 4.10755 116.527C3.62521 116.78 3.03034 116.592 2.77712 116.11C2.32694 115.251 1.22561 113.323 0.634754 111.727C0.331287 110.906 0.168493 110.151 0.200649 109.606C0.234814 109.072 0.451871 108.713 0.761367 108.458C1.08694 108.189 1.59137 108.03 2.26463 108.051C3.0042 108.075 4.05932 108.309 5.21892 108.395C6.19162 108.468 7.25475 108.437 8.22142 107.952C8.70778 107.707 9.30066 107.903 9.54383 108.39C9.78701 108.874 9.59205 109.468 9.1057 109.71C7.29294 110.622 5.235 110.424 3.60914 110.19C3.1248 110.119 2.52388 110.073 2.18625 110.052Z"
+                        fill="black" />
+                </svg>
+            </div>
 
-        <p class="a-container">
-            <a href="lejeudelavie/">
-                <img src="logo-site.svg" />
-                Le site
-            </a>
-            <a href="https://github.com/mstrdav/lejeudelavie">
-                <img src="logo-github.svg" />
-                Le github
-            </a>
-        </p>
-        <h3 id="soutien">Me soutenir</h3>
-        <p>Je me doute que personne va soutenir mes pauvres projets, mais si jamais : mon site est vérifié pour le programme Brave Rewards, donc n'hésitez pas.</p>
-    </section>
+        </header>
+        <section id="projets"></section>
+        <section id="contact"></section>
+        <section id="infos"></section>
+        <footer></footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+        integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script/canvas-animation.js"></script>
 </body>
 
 </html>

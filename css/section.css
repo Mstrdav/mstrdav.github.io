@@ -1,0 +1,9 @@
+section {
+    height: 100vh;
+    width: 100%;
+    background: #3C3B52;
+}
+
+section:nth-of-type(2n) {
+    background: #282741;
+}
