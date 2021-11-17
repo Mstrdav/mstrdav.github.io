@@ -2,12 +2,14 @@ var c = document.getElementById("header-animated-canva");
 var ctx = c.getContext("2d");
 var cH;
 var cW;
-var bgColor = "#282741";
 var animations = [];
 var circles = [];
+const colors = ["#282741", "#7E5B8F", "#2980B9", "#78290F"].sort((a,b)=>0.5 - Math.random());
+
+var initialColor = colors[0];
 
 var colorPicker = (function () {
-    var colors = ["#282741", "#7E5B8F", "#2980B9", "#78290F"];
+    
     var index = 0;
 
     function next() {
@@ -67,7 +69,7 @@ function handleEvent(e) {
         duration: Math.max(targetR / 2, minCoverDuration),
         easing: "easeOutQuart",
         complete: function () {
-            bgColor = pageFill.fill;
+            initialColor = pageFill.fill;
             removeAnimation(fillAnimation);
         }
     });
@@ -131,7 +133,7 @@ Circle.prototype.draw = function () {
 var animate = anime({
     duration: Infinity,
     update: function () {
-        ctx.fillStyle = bgColor;
+        ctx.fillStyle = initialColor;
         ctx.fillRect(0, 0, cW, cH);
         animations.forEach(function (anim) {
             anim.animatables.forEach(function (animatable) {
