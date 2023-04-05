@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* scroll snap */
+    scroll-snap-type: x mandatory;
+
+    /* scroll behavior */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #000;
+    color: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    width: fit-content;
+    min-height: 100vh;
+
+    overflow-y: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    padding: 0 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: none;
+    z-index: 100;
+}
+
+header #header-left {
+    display: flex;
+    align-items: center;
+}
+
+header #header-left h1 {
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: lighter;
+    color: #fff;
+    margin-left: 20px;
+}
+
+header #header-right {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+header #header-right a {
+    font-size: 1rem;
+    font-weight: lighter;
+    color: #fff;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+header #header-right a:hover {
+    color: #f00;
+}
+
+header #header-right a img {
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+header #header-right button {
+    font-size: 1rem;
+    font-weight: lighter;
+    color: #fff;
+    margin-right: 20px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/* project selector */
+#project-selector {
+    position: fixed;
+    top: calc(100% - 220px);
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 50;
+
+    transition: all 0.5s ease;
+}
+
+#project-selector-frame {
+    position: relative;
+    margin-bottom: 60px;
+    top: 0;
+    left: 60px;
+    width: 250px;
+    height: 160px;
+    border: 4px solid #fff;
+    border-radius: 10px;
+    z-index: 50;
+}
+
+#project-selector-list {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: auto;
+    height: 160px;
+    z-index: 50;
+
+    display: flex;
+    transition: all 0.5s ease;
+}
+
+#project-selector-list::-webkit-scrollbar {
+    width: 0;
+}
+
+#project-selector-list li {
+    display: block;
+    min-width: 250px;
+    height: 160px;
+    margin-left: 40px;
+    border-radius: 10px;
+    color: #000;
+    font-size: 1rem;
+    cursor: pointer;
+
+    background-color: rgba(0, 0, 0, 0.3);
+
+    /* testing only */
+    position: relative;
+}
+
+#project-selector-list li h2 {
+    font-weight: 300;
+    color: #fff;
+
+    /* testing only */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#project-info {
+    z-index: 100;
+    position: relative;
+
+    padding: 60px;
+    height: calc(100% - 340px);
+    overflow-y: scroll;
+
+    background: red;
+    transition: all 0.5s ease;
+}
+
+#project-info-actions {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    padding: 0 60px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: none;
+    backdrop-filter: blur(5px);
+    z-index: 100;
+}
+
+#project-info-actions a {
+    font-size: 1rem;
+    font-weight: lighter;
+    color: #fff;
+    background: black;
+    padding: 10px 20px;
+    border: none;
+    text-decoration: none;
+}
+
+/* projects in background */
+.project-canva {
+    background: radial-gradient(38.62% 56.88% at 88.82% 27.05%, rgba(255, 245, 0, 0.164) 0%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(45.69% 79.83% at 65.69% 83.94%, rgba(0, 46, 115, 0.2) 0%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(33.58% 63.96% at 31.77% 36.04%, rgba(243, 11, 11, 0.2) 0%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(68.37% 95.74% at 8.37% 60.79%, #3B2300 0%, rgba(0, 0, 0, 0) 100%);
+    display: block;
+    width: 100vw;
+    height: 100vh;
+
+    /* scroll snap */
+    scroll-snap-align: start;
+}

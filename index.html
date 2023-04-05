@@ -1,89 +1,111 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Mstrdav - Github Portfolio</title>
 
     <!-- stylesheets -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins|Roboto&display=swap" rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins|Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <!-- the body is a list of my project, each one full page and in a row layout -->
     <!-- stacked on top, the layout to change which project is visible, to change language, and to see more information -->
     <header>
-        <div id="header-left">
-            <h1>mstrdav.github.io</h1>
-        </div>
-        <div id="header-right">
-            <!-- link to github -->
-            <a href="https://github.com/Mstrdav" target="_blank">
-                <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="github">
-            </a>
-            <!-- toggle language -->
-            <button id="lang-toggle">FR</button>
-        </div>
+      <div id="header-left">
+        <h1>mstrdav.github.io</h1>
+      </div>
+      <div id="header-right">
+        <!-- link to github -->
+        <a href="https://github.com/Mstrdav" target="_blank">
+          <img
+            src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+            alt="github"
+          />
+        </a>
+        <!-- toggle language -->
+        <button id="lang-toggle">FR</button>
+      </div>
     </header>
     <div id="project-selector">
-        <!-- the frame highlighting the current project -->
-        <div id="project-selector-frame"></div>
-        <!-- the list of projects -->
-        <ul id="project-selector-list">
-            <li class="project-selector-item" data-project="project-1">
-                <h2>Project 1</h2>
-            </li>
-            <li class="project-selector-item" data-project="project-2">
-                <h2>Project 2</h2>
-            </li>
-            <li class="project-selector-item" data-project="project-3">
-                <h2>Project 3</h2>
-            </li>
-            <li class="project-selector-item" data-project="project-4">
-                <h2>Project 4</h2>
-            </li>
-            <li class="project-selector-item" data-project="project-5">
-                <h2>Project 5</h2>
-            </li>
-        </ul>
-        <!-- project info zone -->
-        <div id="project-info">
-            <div id="project-info-content">
-                <h2>Project 1</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam
-                    tincidunt, nunc nisl aliquam nisl, eget aliquam nisl nisl sit amet nisl. Nulla facilisi.
-                    Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nisl nisl
-                    sit amet nisl. Nulla facilisi.
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam
-                    tincidunt, nunc nisl aliquam nisl, eget aliquam nisl nisl sit amet nisl. Nulla facilisi.
-                    Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nisl nisl
-                    sit amet nisl. Nulla facilisi.
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam
-                    tincidunt, nunc nisl aliquam nisl, eget aliquam nisl nisl sit amet nisl. Nulla facilisi.
-                    Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nisl nisl
-                    sit amet nisl. Nulla facilisi.
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam
-                    tincidunt, nunc nisl aliquam nisl, eget aliquam nisl nisl sit amet nisl. Nulla facilisi.
-                    Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nisl nisl
-                    sit amet nisl. Nulla facilisi.
-                </p>
-            </div>
+      <!-- the frame highlighting the current project -->
+      <div id="project-selector-frame">
+      </div>
+      <!-- the list of projects -->
+      <ul id="project-selector-list">
+        <li id="psi-1" class="project-selector-item" data-project="project-1">
+          <h2>Project 1</h2>
+        </li>
+        <li id="psi-2" class="project-selector-item" data-project="project-2">
+          <h2>Project 2</h2>
+        </li>
+        <li id="psi-3" class="project-selector-item" data-project="project-3">
+          <h2>Project 3</h2>
+        </li>
+        <li id="psi-4" class="project-selector-item" data-project="project-4">
+          <h2>Project 4</h2>
+        </li>
+      </ul>
+
+      <!-- project info zone -->
+      <div id="project-info">
+        <div id="project-info-content">
+          <h2>Project 1</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+            euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget
+            aliquam nisl nisl sit amet nisl. Nulla facilisi. Sed euismod, nunc
+            ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nisl nisl
+            sit amet nisl. Nulla facilisi.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+            euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget
+            aliquam nisl nisl sit amet nisl. Nulla facilisi. Sed euismod, nunc
+            ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nisl nisl
+            sit amet nisl. Nulla facilisi.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+            euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget
+            aliquam nisl nisl sit amet nisl. Nulla facilisi. Sed euismod, nunc
+            ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nisl nisl
+            sit amet nisl. Nulla facilisi.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+            euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget
+            aliquam nisl nisl sit amet nisl. Nulla facilisi. Sed euismod, nunc
+            ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nisl nisl
+            sit amet nisl. Nulla facilisi.
+          </p>
         </div>
+        <div id="project-info-actions">
+          <div id="project-info-actions-left">
+            <a id="pia-prev" href="">Previous</a>
+          </div>
+          <div id="project-info-actions-center">
+            <a id="pia-gh" href="" target="_blank">View on github</a>
+            <a id="pia-live" href="" target="_blank">View live</a>
+          </div>
+          <div id="project-info-actions-right">
+            <a id="pia-next" href="">Next</a>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- the list of projects -->
-    <div id="project1" class="project-canva"></div>
-    <div id="project2" class="project-canva"></div>
-    <div id="project3" class="project-canva"></div>
-    <div id="project4" class="project-canva"></div>
-</body>
+    <div id="project-1" class="project-canva"></div>
+    <div id="project-2" class="project-canva"></div>
+    <div id="project-3" class="project-canva"></div>
+    <div id="project-4" class="project-canva"></div>
 
+    <script src="js/project_selector.js"></script>
+  </body>
 </html>
