@@ -18,7 +18,7 @@
     <!-- stacked on top, the layout to change which project is visible, to change language, and to see more information -->
     <header>
       <div id="header-left">
-        <h1>mstrdav.github.io</h1>
+        <h1><a href="">mstrdav.github.io</a></h1>
       </div>
       <div id="header-right">
         <!-- link to github -->
@@ -32,10 +32,32 @@
         <button id="lang-toggle">FR</button>
       </div>
     </header>
+    <div id="project-div">
+      
+    </div>
+    <div id="content">
+      <!-- project info zone -->
+      <div id="project-info">
+        <div id="project-info-content">
+          <h2>Project 1</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+            euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget
+            aliquam nisl nisl sit amet nisl. Nulla facilisi. Sed euismod, nunc
+            ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nisl nisl
+            sit amet nisl. Nulla facilisi.
+          </p>
+        </div>
+        <div id="project-info-actions">
+          <a id="pia-live" href="">View live</a>
+          <a id="pia-gh" href="" target="_blank">View on github</a>
+        </div>
+      </div>
+    </div>
+
     <div id="project-selector">
       <!-- the frame highlighting the current project -->
-      <div id="project-selector-frame">
-      </div>
+      <div id="project-selector-frame"></div>
       <!-- the list of projects -->
       <ul id="project-selector-list">
         <li id="psi-1" class="project-selector-item" data-project="project-1">
@@ -51,60 +73,7 @@
           <h2>Project 4</h2>
         </li>
       </ul>
-
-      <!-- project info zone -->
-      <div id="project-info">
-        <div id="project-info-content">
-          <h2>Project 1</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-            euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget
-            aliquam nisl nisl sit amet nisl. Nulla facilisi. Sed euismod, nunc
-            ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nisl nisl
-            sit amet nisl. Nulla facilisi.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-            euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget
-            aliquam nisl nisl sit amet nisl. Nulla facilisi. Sed euismod, nunc
-            ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nisl nisl
-            sit amet nisl. Nulla facilisi.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-            euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget
-            aliquam nisl nisl sit amet nisl. Nulla facilisi. Sed euismod, nunc
-            ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nisl nisl
-            sit amet nisl. Nulla facilisi.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-            euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget
-            aliquam nisl nisl sit amet nisl. Nulla facilisi. Sed euismod, nunc
-            ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nisl nisl
-            sit amet nisl. Nulla facilisi.
-          </p>
-        </div>
-        <div id="project-info-actions">
-          <div id="project-info-actions-left">
-            <a id="pia-prev" href="">Previous</a>
-          </div>
-          <div id="project-info-actions-center">
-            <a id="pia-gh" href="" target="_blank">View on github</a>
-            <a id="pia-live" href="" target="_blank">View live</a>
-          </div>
-          <div id="project-info-actions-right">
-            <a id="pia-next" href="">Next</a>
-          </div>
-        </div>
-      </div>
     </div>
-
-    <!-- the list of projects -->
-    <div id="project-1" class="project-canva"></div>
-    <div id="project-2" class="project-canva"></div>
-    <div id="project-3" class="project-canva"></div>
-    <div id="project-4" class="project-canva"></div>
 
     <script src="js/project_selector.js"></script>
   </body>

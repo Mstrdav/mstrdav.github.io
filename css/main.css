@@ -10,29 +10,26 @@ html {
 
     /* scroll behavior */
     scroll-behavior: smooth;
+    height: 100%;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
-    background: #000;
+    background: linear-gradient(49deg, rgb(35, 2, 79) 0%, rgb(41, 3, 30) 50%, rgba(97, 1, 1, 0.8) 100%);
     color: #fff;
 
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: stretch;
-    width: fit-content;
-    min-height: 100vh;
+    height: 100%;
 
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
     height: 80px;
-    padding: 0 20px;
+    padding: 20px;
 
     display: flex;
     justify-content: space-between;
@@ -40,6 +37,8 @@ header {
 
     background: none;
     z-index: 100;
+    
+    transition: all 0.3s ease;
 }
 
 header #header-left {
@@ -94,117 +93,137 @@ header #header-right button {
 
 /* project selector */
 #project-selector {
-    position: fixed;
-    top: calc(100% - 220px);
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: 50;
+    height: 30%;
+    padding: 40px;
+    z-index: 100;
+    overflow-x: hidden;
 
-    transition: all 0.5s ease;
-}
-
-#project-selector-frame {
-    position: relative;
-    margin-bottom: 60px;
-    top: 0;
-    left: 60px;
-    width: 250px;
-    height: 160px;
-    border: 4px solid #fff;
-    border-radius: 10px;
-    z-index: 50;
+    transition: all 0.3s ease;
 }
 
 #project-selector-list {
-    position: absolute;
-    top: 0;
-    left: 20px;
-    width: auto;
-    height: 160px;
-    z-index: 50;
-
     display: flex;
-    transition: all 0.5s ease;
-}
+    flex-direction: row;
+    justify-content: start;
+    align-items: stretch;
+    height: 100%;
+    width: 100%;
+    padding: 0 0px;
 
-#project-selector-list::-webkit-scrollbar {
-    width: 0;
+    transition: all 0.3s ease-in-out;
 }
 
 #project-selector-list li {
-    display: block;
-    min-width: 250px;
-    height: 160px;
-    margin-left: 40px;
+    list-style-type: none;
     border-radius: 10px;
-    color: #000;
-    font-size: 1rem;
+    margin-right: 20px;
+    padding: 10px;
+    min-width: min(300px, 70%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    /* dark blue and purple transparent gradient */
+    background: linear-gradient(25deg, rgba(93, 2, 139, 0.5), rgba(224, 7, 130, 0.3) 50%, rgba(255, 208, 1, 0.522) 100%);
+    background-size: 200% 100%;
+    background-position: 0% 0%;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+
     cursor: pointer;
+}
 
-    background-color: rgba(0, 0, 0, 0.3);
-
-    /* testing only */
-    position: relative;
+#project-selector-list li:hover {
+    background-position: 100% 100%;
+    /* strong box shadow */
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
+    transform: translate(-2px, -2px);
 }
 
 #project-selector-list li h2 {
-    font-weight: 300;
-    color: #fff;
-
-    /* testing only */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+    font-weight: lighter;
 }
 
+/* content */
 #project-info {
+    height: auto;
+    width: clamp(300px, 100%, 900px);
+    padding: 40px clamp(40px, 5%, 80px);
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
     z-index: 100;
     position: relative;
 
-    padding: 60px;
-    height: calc(100% - 340px);
-    overflow-y: scroll;
+    transition: opacity 0.4s ease-in-out;
+}
 
-    background: red;
-    transition: all 0.5s ease;
+#project-info-content {
+    margin-bottom: 30px;
+}
+
+#project-info-content h2 {
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: lighter;
+    margin-bottom: 20px;
+    color: #ffaf02;
 }
 
 #project-info-actions {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    padding: 0 60px;
-
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: start;
     align-items: center;
-
-    background: none;
-    backdrop-filter: blur(5px);
-    z-index: 100;
+    width: 100%;
 }
 
 #project-info-actions a {
     font-size: 1rem;
     font-weight: lighter;
     color: #fff;
-    background: black;
-    padding: 10px 20px;
-    border: none;
+    margin-right: 20px;
     text-decoration: none;
+    background-color: rgb(76, 1, 85);
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
 }
 
-/* projects in background */
-.project-canva {
-    background: radial-gradient(38.62% 56.88% at 88.82% 27.05%, rgba(255, 245, 0, 0.164) 0%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(45.69% 79.83% at 65.69% 83.94%, rgba(0, 46, 115, 0.2) 0%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(33.58% 63.96% at 31.77% 36.04%, rgba(243, 11, 11, 0.2) 0%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(68.37% 95.74% at 8.37% 60.79%, #3B2300 0%, rgba(0, 0, 0, 0) 100%);
-    display: block;
-    width: 100vw;
-    height: 100vh;
+#project-info-actions a:hover {
+    background-color: #ffaf02bf;
+    border: none;
 
-    /* scroll snap */
-    scroll-snap-align: start;
+    /* box-shadow */
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
+    transform: translate(-2px, -2px);
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #ffaf02;
+}
+
+#project-div {
+    position: absolute;
+    top: 120px;
+    left: 30%;
+    height: 50%;
+    background: linear-gradient(49deg, rgba(17, 11, 0, 0.645) 0%, rgba(36, 0, 26, 0.684) 50%, rgba(12, 0, 26, 0.8) 100%);
+    aspect-ratio: 16/9;
+    border-radius: 10px;
+    z-index: 1;
+
+    transition: all 0.5s ease-in;
 }
