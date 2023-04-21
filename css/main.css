@@ -17,7 +17,6 @@ body {
     font-family: 'Roboto', sans-serif;
     background: linear-gradient(49deg, rgb(35, 2, 79) 0%, rgb(41, 3, 30) 50%, rgba(97, 1, 1, 0.8) 100%);
     color: #fff;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -220,7 +219,8 @@ a:hover {
     top: 120px;
     left: 30%;
     height: 50%;
-    background: linear-gradient(49deg, rgba(17, 11, 0, 0.645) 0%, rgba(36, 0, 26, 0.684) 50%, rgba(12, 0, 26, 0.8) 100%);
+    min-width: 60%;
+    background: rgba(0, 0, 0, 0.8);
     aspect-ratio: 16/9;
     border-radius: 10px;
     z-index: 1;

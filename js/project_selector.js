@@ -115,3 +115,16 @@ piaLive.addEventListener("click", (e) => {
   projectDiv.style.top = "0px";
   projectDiv.style.borderRadius = "0px";
 });
+
+/*
+create a canvas in the project div
+*/
+
+const canvas = document.createElement("canvas");
+canvas.id = "boids";
+canvas.style.width = "100%";
+canvas.style.height = "100%";
+const projectDiv = document.querySelector("#project-div");
+projectDiv.appendChild(canvas);
+
+startBoids();
